@@ -7,8 +7,8 @@ import './App.scss'
 
 const App = () => (
     <div className='App'>
-        <UserList/>
-        <UserPofile name='Junaid' email="junaid_sikander@live.com"/>
+        <UserList dataSource='https://jsonplaceholder.typicode.com/users'/>
+        <UserPofile name='Junaid' email="junaid_sikander@live.com" dataSource='https://jsonplaceholder.typicode.com/posts'/>
     </div>
 );
 

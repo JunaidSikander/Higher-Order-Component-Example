@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from 'react';
 
-const withData = (WrapComponent, dataSource) => {
+const withData = WrapComponent => {
     const WithData = props => {
         const [data, setData] = useState([]);
 
         useEffect(() => {
-            fetch(dataSource)
+            fetch(props.dataSource)
                 .then(response => response.json())
                 .then(data => setData(data.slice(0, 3)));
         });
